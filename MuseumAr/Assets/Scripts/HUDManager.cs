@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuManager : MonoBehaviour
+public class HUDManager : MonoBehaviour
 {
     public Canvas maincanvas;
     public GameObject mainMenu;

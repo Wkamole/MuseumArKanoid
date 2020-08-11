@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 828633613}
         m_MethodName: SetMenuActive
         m_Mode: 2
         m_Arguments:
@@ -1095,6 +1095,8 @@ GameObject:
   - component: {fileID: 828633614}
   - component: {fileID: 828633615}
   - component: {fileID: 828633613}
+  - component: {fileID: 828633617}
+  - component: {fileID: 828633616}
   m_Layer: 0
   m_Name: MenuManger
   m_TagString: Untagged
@@ -1115,10 +1117,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maincanvas: {fileID: 1110357548}
-  mainMenu: {fileID: 1677168406}
-  selecctionMenu: {fileID: 442501172}
-  MuseumMenu: {fileID: 1402376182}
-  QRmenu: {fileID: 1342897664}
+  menus:
+  - {fileID: 1677168406}
+  - {fileID: 442501172}
+  - {fileID: 1402376182}
+  - {fileID: 1342897664}
 --- !u!4 &828633614
 Transform:
   m_ObjectHideFlags: 0
@@ -1145,11 +1148,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0054da720778c5242a463b38a797ffe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maincanvas: {fileID: 0}
-  mainMenu: {fileID: 0}
-  selecctionMenu: {fileID: 0}
-  MuseumMenu: {fileID: 0}
-  QRmenu: {fileID: 0}
+--- !u!114 &828633616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828633612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &828633617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828633612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,7 +1685,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 828633613}
         m_MethodName: SetMenuActive
         m_Mode: 2
         m_Arguments:
@@ -2210,7 +2242,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 828633613}
         m_MethodName: Loadlevel
         m_Mode: 5
         m_Arguments:
@@ -2586,7 +2618,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 828633613}
         m_MethodName: SetMenuActive
         m_Mode: 2
         m_Arguments:
@@ -2716,7 +2748,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 828633613}
         m_MethodName: Loadlevel
         m_Mode: 5
         m_Arguments:

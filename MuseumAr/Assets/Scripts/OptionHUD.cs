@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OptionHUD : MonoBehaviour
+public class OptionHUD : HUDManager
 {
     // Start is called before the first frame update
     void Start()

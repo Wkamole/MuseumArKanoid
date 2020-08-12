@@ -396,6 +396,11 @@ PrefabInstance:
       propertyPath: menus.Array.data[1]
       value: 
       objectReference: {fileID: 1744272443}
+    - target: {fileID: 1311110323225181284, guid: e3c3019dbf23c604da65f3c8eb8588bd,
+        type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1744272443}
     - target: {fileID: 1311110323225181285, guid: e3c3019dbf23c604da65f3c8eb8588bd,
         type: 3}
       propertyPath: m_LocalPosition.x

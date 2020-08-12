@@ -12,6 +12,7 @@ public class MenuManagerHUD : HUDManager
     public static MenuManagerHUD instance;
     public int count;
     public bool unlock;
+    public bool unlock2;
 
     // Start is called before the first frame update
     void Start()

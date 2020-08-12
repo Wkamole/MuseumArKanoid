@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MuseumHUD : HUDManager
 {
-   
+    public GameObject button;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,11 @@ public class MuseumHUD : HUDManager
     // Update is called once per frame
     void Update()
     {
-
+        if(MenuManagerHUD.instance.unlock2 == true)
+        {
+            button.gameObject.SetActive(true);
+            MenuManagerHUD.instance.unlock2 = false;
+        }
     }
 
     public override void Loadlevel(string level)

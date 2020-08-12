@@ -10,10 +10,12 @@ public class MenuManagerHUD : HUDManager
     }
     public static MenuManagerHUD instance;
     public int count;
+    public bool unlock;
 
     // Start is called before the first frame update
     void Start()
     {
+        unlock = false;
         menus[0].SetActive(true);
     }
 

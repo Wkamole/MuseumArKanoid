@@ -17,7 +17,7 @@ public class Scan : MonoBehaviour
         if (activate.active)
         {
             Debug.Log("Activado");
-            MenuManager.instace.unlock = true;
+            MenuManagerHUD.instance.unlock = true;
             SceneManager.LoadScene("SampleScene");
         }
     }

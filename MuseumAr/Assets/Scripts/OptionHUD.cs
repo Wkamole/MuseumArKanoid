@@ -7,7 +7,7 @@ public class OptionHUD : HUDManager
 {
     public override void Loadlevel(string level)
     {
-        throw new System.NotImplementedException();
+        SceneManager.LoadScene(level);
     }
 
     public override void SetMenuActive(GameObject gameObject)

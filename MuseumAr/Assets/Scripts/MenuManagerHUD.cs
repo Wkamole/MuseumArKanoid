@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManagerHUD : HUDManager
 {
     public override void Loadlevel(string level)
     {
-        throw new System.NotImplementedException();
+        SceneManager.LoadScene(level);
     }
     public static MenuManagerHUD instance;
     public int count;

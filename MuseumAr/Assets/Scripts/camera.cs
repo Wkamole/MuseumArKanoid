@@ -10,10 +10,14 @@ public class camera : MonoBehaviour
     float rotationY = 0;
     float xRotTemp;
     float yRotTemp;
+    Camera cam;
+
+    public float ZoomSpeed = 0.5f;
 
     void Start()
     {
         this.transform.rotation = Quaternion.Euler(rotationY, rotationX, 0);
+        cam = GetComponent<Camera>();
     }
 
     void Update()
@@ -33,7 +37,26 @@ public class camera : MonoBehaviour
                 rotationY = yRotTemp + (SecondPoint.y - FirstPoint.y) * 90 / Screen.height;
                 this.transform.rotation = Quaternion.Euler(rotationY, rotationX, 0.0f);
             }
-        }
 
+            if (Input.touchCount == 2)
+            {
+                Touch touchZero = Input.GetTouch(0);
+                Touch touchOne = Input.GetTouch(1);
+
+                Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+                Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+                float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+                float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
+
+                float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
+
+                cam.fieldOfView += deltaMagnitudeDiff * ZoomSpeed;
+
+                cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, 0.1f, 179.9f);
+
+            }
+
+        }
     }
 }

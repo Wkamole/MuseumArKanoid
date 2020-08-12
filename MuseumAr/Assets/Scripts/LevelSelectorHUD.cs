@@ -1,9 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelSelectorHUD : HUDManager
 {
+    public override void Loadlevel(string level)
+    {
+        SceneManager.LoadScene(level);
+        //SetMenuOff();
+    }
+
+    public override void SetMenuActive(GameObject gameObject)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void SetMenuOff(GameObject gameObject)
+    {
+        throw new System.NotImplementedException();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +32,5 @@ public class LevelSelectorHUD : HUDManager
     {
         
     }
+
 }

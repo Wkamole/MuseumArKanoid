@@ -4,30 +4,36 @@ using UnityEngine;
 
 public class camera : MonoBehaviour
 {
-    float rotation = Mathf.Rad2Deg;
+    Vector3 FirstPoint;
+    Vector3 SecondPoint;
+    float rotationX = 0;
+    float rotationY = 0;
+    float xRotTemp;
+    float yRotTemp;
 
-    private void Awake()
+    void Start()
     {
-        if (Application.platform == RuntimePlatform.Android)
+        this.transform.rotation = Quaternion.Euler(rotationY, rotationX, 0);
+    }
+
+    void Update()
+    {
+        if (Input.touchCount > 0)
         {
-            rotation = 2.0f;
-            
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                FirstPoint = Input.GetTouch(0).position;
+                xRotTemp = rotationX;
+                yRotTemp = rotationY;
+            }
+            if (Input.GetTouch(0).phase == TouchPhase.Moved)
+            {
+                SecondPoint = Input.GetTouch(0).position;
+                rotationX = xRotTemp + (SecondPoint.x - FirstPoint.x) * 180 / Screen.width;
+                rotationY = yRotTemp + (SecondPoint.y - FirstPoint.y) * 90 / Screen.height;
+                this.transform.rotation = Quaternion.Euler(rotationY, rotationX, 0.0f);
+            }
         }
-    }
-    private void OnMouseDrag()
-    {
-        float rotX = Input.GetAxis("Mouse X") * rotation;
-        float rotY = Input.GetAxis("Mouse Y") * rotation;
-        transform.Rotate(Camera.main.transform.up, -rotX, Space.World);
-        transform.Rotate(Camera.main.transform.right, rotY, Space.World);
-    }
 
-    /*void OnMouseDrag()
-    {
-        float rotX = Input.GetAxis("Raton Eje X") * rotation * Mathf.Deg2Rad;
-        float rotY = Input.GetAxis("Raton Eje Y") * rotation * Mathf.Deg2Rad;
-
-        transform.Rotate(Camera. , -rotX,);
-        transform.Rotate(Vector3.right , rotY);
-    }*/
+    }
 }

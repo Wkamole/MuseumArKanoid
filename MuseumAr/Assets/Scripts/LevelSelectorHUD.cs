@@ -30,7 +30,11 @@ public class LevelSelectorHUD : HUDManager
     // Update is called once per frame
     void Update()
     {
-        
+        if(MenuManagerHUD.instance.unlock == true)
+        {
+            menus[1].SetActive(true);
+            MenuManagerHUD.instance.unlock = false;
+        }
     }
 
 }

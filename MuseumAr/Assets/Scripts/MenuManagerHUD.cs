@@ -23,7 +23,7 @@ public class MenuManagerHUD : HUDManager
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void SetCount(int i)

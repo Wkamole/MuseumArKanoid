@@ -31,5 +31,4 @@ public abstract class HUDManager : MonoBehaviour
 
     public abstract void Loadlevel(string level);
 
-
 }

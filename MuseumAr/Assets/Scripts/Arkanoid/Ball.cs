@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour
 
     public float initForce = 100000;
     private Rigidbody2D rb;
+    public GameObject GM;
 
     void Start()
     {
@@ -27,4 +28,14 @@ public class Ball : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.None;
         rb.AddForce(new Vector2(0, -initForce));
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "tile")
+        {
+            GM.GetComponent<GameManager>().TileHit();
+        }
+
+    }
+
 }

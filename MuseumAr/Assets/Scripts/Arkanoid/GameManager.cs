@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         else if(state == 0 && (Input.touchCount > 0 || Input.anyKey))
         {
             state = 1;
+            level.GetComponent<Level>().InstantiateLevel();
             ballcomp.Init();
         }
     }
@@ -45,7 +46,20 @@ public class GameManager : MonoBehaviour
 
     void LoseLive()
     {
-        state = 1;
         ballcomp.Init();
+    }
+
+    public void TileHit()
+    {
+        level.GetComponent<Level>().tileAmount--;
+        if(level.GetComponent<Level>().tileAmount <= 0)
+        {
+            LevelCompleted();
+        }
+    }
+
+    public void LevelCompleted()
+    {
+
     }
 }

@@ -46,7 +46,14 @@ public class GameManager : MonoBehaviour
 
     void LoseLive()
     {
+        lives--;
         ballcomp.Init();
+        if (lives >= 0) GameOver();
+    }
+
+    void GameOver()
+    {
+
     }
 
     public void TileHit()
@@ -60,6 +67,6 @@ public class GameManager : MonoBehaviour
 
     public void LevelCompleted()
     {
-
+        //MenuManagerHUD.instance.LoadScene("SampleScene");
     }
 }

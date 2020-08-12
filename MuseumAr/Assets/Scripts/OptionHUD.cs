@@ -10,6 +10,16 @@ public class OptionHUD : HUDManager
         throw new System.NotImplementedException();
     }
 
+    public override void SetMenuActive(GameObject gameObject)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void SetMenuOff(GameObject gameObject)
+    {
+        throw new System.NotImplementedException();
+    }
+
     // Start is called before the first frame update
     void Start()
     {

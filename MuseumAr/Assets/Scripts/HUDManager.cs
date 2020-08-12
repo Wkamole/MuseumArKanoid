@@ -15,7 +15,6 @@ public abstract class HUDManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        menus[0].SetActive(true);
     }
 
     // Update is called once per frame
@@ -24,23 +23,11 @@ public abstract class HUDManager : MonoBehaviour
 
     }
 
-    public void SetMenuActive(GameObject gameObject)
-    {
-        SetMenuOff();
-        gameObject.SetActive(true);
-    }
+    public abstract void SetMenuActive(GameObject gameObject);
 
-    public void SetMenuOff()
-    {
-        for(int i = 0;i<4;i++)
-        {
-            menus[i].SetActive(false);
-        }
-      /*  mainMenu.SetActive(false);
-        selecctionMenu.SetActive(false);
-        MuseumMenu.SetActive(false);
-        QRmenu.SetActive(false);*/
-    }
+
+    public abstract void SetMenuOff(GameObject gameObject);
+
 
     public abstract void Loadlevel(string level);
 

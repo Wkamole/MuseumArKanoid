@@ -21,7 +21,7 @@ public class MuseumHUD : HUDManager
     public override void Loadlevel(string level)
     {
         SceneManager.LoadScene(level);
-        SetMenuOff();
+        //SetMenuOff();
        /* if(count == 0)
         {
             Debug.Log(library.objects[0]);
@@ -35,9 +35,23 @@ public class MuseumHUD : HUDManager
             }
         }*/
        // library.SetObjectActive(library.gameObject);
-        throw new System.NotImplementedException();
+
     }
 
+    public override void SetMenuActive(GameObject gameObject)
+    {
+        gameObject.SetActive(true);
 
+    }
 
+    public override void SetMenuOff(GameObject gameObject)
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void goBack()
+    {
+        MenuManagerHUD.instance.menus[0].SetActive(true);
+
+    }
 }

@@ -14,7 +14,7 @@ public class MenuManagerHUD : HUDManager
     // Start is called before the first frame update
     void Start()
     {
-        
+        menus[0].SetActive(true);
     }
 
     // Update is called once per frame
@@ -43,5 +43,26 @@ public class MenuManagerHUD : HUDManager
         DontDestroyOnLoad(gameObject);
     }
 
+    public override void SetMenuActive(GameObject gameObject)
+    {
+       // SetMenuOff();
+        gameObject.SetActive(true);
+    }
 
+    public override void SetMenuOff(GameObject gameObject)
+    {
+        gameObject.SetActive(false);
+        /* for (int i = 0; i < menus.Count; i++)
+         {
+             menus[i].SetActive(false);
+         }*/
+    }
+
+    /*   for(int i = 0;i<4;i++)
+   {
+       menus[i].SetActive(false);
+   }
+
+SetMenuOff();
+gameObject.SetActive(true);*/
 }

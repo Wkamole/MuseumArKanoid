@@ -8,7 +8,16 @@ public class LevelSelectorHUD : HUDManager
     public override void Loadlevel(string level)
     {
         SceneManager.LoadScene(level);
-        SetMenuOff();
+        //SetMenuOff();
+    }
+
+    public override void SetMenuActive(GameObject gameObject)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void SetMenuOff(GameObject gameObject)
+    {
         throw new System.NotImplementedException();
     }
 

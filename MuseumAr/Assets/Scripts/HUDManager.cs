@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class HUDManager : MonoBehaviour
+public abstract class HUDManager : MonoBehaviour
 {
     public Canvas maincanvas;
     public List<GameObject> menus;
@@ -42,9 +42,7 @@ public class HUDManager : MonoBehaviour
         QRmenu.SetActive(false);*/
     }
 
-    public void Loadlevel(string level)
-    {
-        SceneManager.LoadScene(level);
-    }
+    public abstract void Loadlevel(string level);
+
 
 }

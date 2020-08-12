@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 828633613}
+      - m_Target: {fileID: 0}
         m_MethodName: SetMenuActive
         m_Mode: 2
         m_Arguments:
@@ -738,7 +738,7 @@ RectTransform:
   m_Children:
   - {fileID: 1868342038}
   m_Father: {fileID: 1677168407}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -788,7 +788,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 828633613}
+      - m_Target: {fileID: 828633618}
         m_MethodName: SetMenuActive
         m_Mode: 2
         m_Arguments:
@@ -1172,9 +1172,9 @@ GameObject:
   m_Component:
   - component: {fileID: 828633614}
   - component: {fileID: 828633615}
-  - component: {fileID: 828633613}
   - component: {fileID: 828633617}
   - component: {fileID: 828633616}
+  - component: {fileID: 828633618}
   m_Layer: 0
   m_Name: MenuManger
   m_TagString: Untagged
@@ -1182,24 +1182,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &828633613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 828633612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 329dfba3383126b42b4c4374ae971e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maincanvas: {fileID: 1110357548}
-  menus:
-  - {fileID: 1677168406}
-  - {fileID: 442501172}
-  - {fileID: 1402376182}
-  - {fileID: 1342897664}
 --- !u!4 &828633614
 Transform:
   m_ObjectHideFlags: 0
@@ -1264,6 +1246,25 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &828633618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828633612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fde4412fd9cdd24f8a2934c5748b42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maincanvas: {fileID: 1110357548}
+  menus:
+  - {fileID: 1677168406}
+  - {fileID: 442501172}
+  - {fileID: 1402376182}
+  - {fileID: 1342897664}
+  count: 0
 --- !u!1 &954281897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,7 +1843,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 828633613}
+      - m_Target: {fileID: 0}
         m_MethodName: SetMenuActive
         m_Mode: 2
         m_Arguments:
@@ -2154,7 +2155,7 @@ RectTransform:
   m_Children:
   - {fileID: 621844503}
   m_Father: {fileID: 1677168407}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2362,7 +2363,7 @@ RectTransform:
   m_Children:
   - {fileID: 1136894837}
   m_Father: {fileID: 1677168407}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2412,7 +2413,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 828633613}
+      - m_Target: {fileID: 828633618}
         m_MethodName: SetMenuActive
         m_Mode: 2
         m_Arguments:
@@ -2542,7 +2543,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 828633613}
+      - m_Target: {fileID: 0}
         m_MethodName: Loadlevel
         m_Mode: 5
         m_Arguments:
@@ -2617,10 +2618,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1568591567}
   - {fileID: 690303564}
   - {fileID: 2005228840}
   - {fileID: 1467709058}
+  - {fileID: 1568591567}
   m_Father: {fileID: 954281898}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2725,7 +2726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1744272444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2789,7 +2790,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 828633618}
+        m_MethodName: SetCount
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: Figures
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 828633615}
         m_MethodName: Loadlevel
         m_Mode: 5
         m_Arguments:
@@ -2919,7 +2931,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 828633613}
+      - m_Target: {fileID: 0}
         m_MethodName: SetMenuActive
         m_Mode: 2
         m_Arguments:
@@ -3049,7 +3061,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 828633613}
+      - m_Target: {fileID: 828633615}
         m_MethodName: Loadlevel
         m_Mode: 5
         m_Arguments:
@@ -3058,6 +3070,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Figures
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 828633618}
+        m_MethodName: SetCount
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1866253038
@@ -3207,7 +3230,7 @@ RectTransform:
   m_Children:
   - {fileID: 1092747108}
   m_Father: {fileID: 1677168407}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3257,7 +3280,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 828633613}
+      - m_Target: {fileID: 828633618}
         m_MethodName: SetMenuActive
         m_Mode: 2
         m_Arguments:

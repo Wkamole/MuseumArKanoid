@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1314711713249524828
 Transform:
   m_ObjectHideFlags: 0
@@ -107,6 +107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlock: 1
-  info: Texto1
-  nameObject: Objeto1
+  info: {fileID: 0}
   button: {fileID: 0}
+  infoString: texto1

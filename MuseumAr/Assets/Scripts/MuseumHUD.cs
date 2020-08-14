@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Clase encargada de manejar los menus asociados a MuseumHUD
 public class MuseumHUD : HUDManager
 {
     public GameObject button;
@@ -21,38 +22,27 @@ public class MuseumHUD : HUDManager
             MenuManagerHUD.instance.unlock2 = false;
         }
     }
-
+    // override de la clase HUDManager, permite cargar la escena deseada
     public override void Loadlevel(string level)
     {
         SceneManager.LoadScene(level);
-        //SetMenuOff();
-       /* if(count == 0)
-        {
-            Debug.Log(library.objects[0]);
-            library.objects[0].gameObject.SetActive(true);
-        }
-        else
-        {
-            if(count == 1)
-            {
-                library.objects[1].gameObject.SetActive(true);
-            }
-        }*/
-       // library.SetObjectActive(library.gameObject);
 
     }
+    //Override de la clase HUDManager, permite activar un game objetc
 
     public override void SetMenuActive(GameObject gameObject)
     {
         gameObject.SetActive(true);
 
     }
+    //Override de la clase HUDManager, permite desactivar un game objetc
 
     public override void SetMenuOff(GameObject gameObject)
     {
         gameObject.SetActive(false);
     }
 
+    //activar el menu de inicio al volver a la escena inicial
     public void goBack()
     {
         MenuManagerHUD.instance.menus[0].SetActive(true);

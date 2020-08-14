@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-
+    //list of sounds
     public Sound[] sounds;
 
+    //instancia de la clase sonido gracias a esto podemos llamarla donde queramos
     public static SoundManager instance;
 
     void Awake()
@@ -34,11 +35,12 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+
     void Start()
     {
         Play("GameMusic");
     }
-
+    //Permite hacer sonar el nombre del sonido correspondiente 
     public void Play (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);

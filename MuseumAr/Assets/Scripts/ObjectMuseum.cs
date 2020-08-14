@@ -19,6 +19,7 @@ public class ObjectMuseum : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //se encarga de transformar el texto asignado, a un texto definido por el string del objeto
         if(unlock == true)
         {
             info.GetComponent<UnityEngine.UI.Text>().text = infoString;
@@ -27,8 +28,8 @@ public class ObjectMuseum : MonoBehaviour
         //info.GetComponent<UnityEngine.UI.Text>().text = infoString;
 
     }
-
-    public void unlocButton(int objectId)
+    // esta funcion quedo obsoleta, ya que el objeto no deberia desbloquear su boton
+    public void unlockButton(int objectId)
     {
 
     }

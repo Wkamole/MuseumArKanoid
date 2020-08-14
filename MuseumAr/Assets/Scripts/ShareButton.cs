@@ -21,7 +21,7 @@ public class ShareButton : MonoBehaviour
     {
         StartCoroutine(TakeScreenshotAndShare());
     }
-
+    // Corrutina que permite la creacion de post en redes sociales
     private IEnumerator TakeScreenshotAndShare()
     {
         yield return new WaitForEndOfFrame();

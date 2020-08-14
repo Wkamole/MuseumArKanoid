@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+//Clase encargada del menu de opciones, el cual no se implmento en el prototipo
 public class OptionHUD : HUDManager
 {
     public override void Loadlevel(string level)

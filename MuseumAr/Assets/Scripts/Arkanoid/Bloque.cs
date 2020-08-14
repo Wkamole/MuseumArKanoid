@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile : MonoBehaviour
+public class Bloque : MonoBehaviour
 {
     public int live = 1;
-
+    
 
     // Start is called before the first frame update
     void Start()

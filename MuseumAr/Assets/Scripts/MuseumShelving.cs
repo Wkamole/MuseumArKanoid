@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Library : MonoBehaviour
+public class MuseumShelving : MonoBehaviour
 {
 
     public List<ObjectMuseum> objects;

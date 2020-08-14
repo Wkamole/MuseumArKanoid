@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public abstract class HUDManager : MonoBehaviour
 {
-    public Canvas maincanvas;
+    private Canvas maincanvas;
     public List<GameObject> menus;
    /* public GameObject mainMenu;
     public GameObject selecctionMenu;

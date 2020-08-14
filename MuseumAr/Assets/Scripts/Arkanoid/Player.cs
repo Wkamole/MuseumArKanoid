@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Paddle : MonoBehaviour
+public class Player : MonoBehaviour
 {
     private Vector3 touchPosition;
     private Rigidbody2D rb;

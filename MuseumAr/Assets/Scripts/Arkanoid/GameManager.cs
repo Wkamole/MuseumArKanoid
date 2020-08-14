@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         else if(state == 0 && (Input.touchCount > 0 || Input.anyKey))
         {
             state = 1;
-            level.GetComponent<Level>().InstantiateLevel();
+            level.GetComponent<LevelManager>().InstantiateLevel();
             ballcomp.Init();
         }
     }
@@ -58,8 +58,8 @@ public class GameManager : MonoBehaviour
 
     public void TileHit()
     {
-        level.GetComponent<Level>().tileAmount--;
-        if(level.GetComponent<Level>().tileAmount <= 0)
+        level.GetComponent<LevelManager>().tileAmount--;
+        if(level.GetComponent<LevelManager>().tileAmount <= 0)
         {
             LevelCompleted();
         }
@@ -67,6 +67,8 @@ public class GameManager : MonoBehaviour
 
     public void LevelCompleted()
     {
-        //MenuManagerHUD.instance.LoadScene("SampleScene");
+        MenuManagerHUD.instance.Loadlevel("SampleScene");
+        MenuManagerHUD.instance.unlock2 = true;
+        MenuManagerHUD.instance.menus[0].SetActive(true);
     }
 }

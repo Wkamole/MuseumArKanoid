@@ -29,7 +29,7 @@ public class LevelSelectorHUD : HUDManager
 
     // Update is called once per frame
     void Update()
-    {
+    {// se encarga de comprar si el menu deberia activarse, en case de ser esto necesario se activa
         if(MenuManagerHUD.instance.unlock == true)
         {
             menus[1].SetActive(true);
